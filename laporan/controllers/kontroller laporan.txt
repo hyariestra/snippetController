@@ -1,0 +1,10 @@
+function printneraca()
+		{
+			$idperusahaan = $_SESSION['IDSekolah'];
+			$data['perusahaan'] = $this->db->query("SELECT * FROM sys_perusahaan 
+			WHERE sys_perusahaan.id_perusahaan = '".$idperusahaan."' ");
+			
+			$content = $this->load->view("printneraca", $data, true);
+			
+			echo $content;
+		}
